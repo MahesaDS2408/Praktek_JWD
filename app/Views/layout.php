@@ -133,7 +133,7 @@
 
 
                             // Mengambil nilai IPK dan menonaktifkan tombol jika IPK kurang dari 3
-                            var ipk = parseFloat(response);
+                            var ipk = parseFloat(response.ipk);
                             var submitButton = $('#submitButton'); // Ganti dengan ID tombol yang sesuai
                             var beasiswaSelect = $('#beasiswa'); // Ganti dengan ID select yang sesuai
                             var file_berkas = $('#file_berkas'); // Ganti dengan ID input yang sesuai
@@ -148,9 +148,6 @@
                                 file_berkas.prop('disabled', false);
                                 beasiswaSelect.prop('disabled', false);
                             }
-
-
-
 
                         }
                     });

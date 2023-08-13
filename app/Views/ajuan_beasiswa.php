@@ -57,7 +57,7 @@
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="ipk">IPK Terakhir</label>
                                     <input class="form-control" id="ipk" type="text" name="ipk" placeholder="Ipk Muncul Setelah input semester saat ini" disabled />
-                                    <input class="form-control" id="id_ipk" type="text" name="id_ipk"   />
+                                    <input class="form-control" id="id_ipk" type="text" name="id_ipk"   hidden/>
                                 </div>
                             </div>
                             
