@@ -11,5 +11,4 @@ class MahasiswaModel extends Model
     protected $allowedFields = ["nama_mahasiswa","email_mahasiswa", "no_hp"];
     protected $useTimestamps = false;
 
-
 }
