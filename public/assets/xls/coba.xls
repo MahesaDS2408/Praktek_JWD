@@ -1,0 +1,91 @@
+<table border=1>
+                        <thead>
+                            <tr>
+                                <th >No</th>
+                                <th >Kode DSSD</th>
+                                <th >Uraian DSSD</th>
+                                <th >Satuan</th>
+                                <th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th>
+								<th >Disabled</th>
+								<th >Info Sub Kegiatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                              <td>1</td>
+                              <td>2.21.000002</td>
+                              <td>Kebijakan Tata Kelola Keamanan Informasi Pemerintah Daerah yang Ditetapkan</td>
+                              <td>Dokumen</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              
+							  <td>T</td>
+							  <td>[2.21.02.1.01.01] </td>
+                          </tr><tr>
+                              <td>2</td>
+                              <td>2.21.000003</td>
+                              <td>Laporan Analisis Kebutuhan Sumber Daya Keamanan Informasi Pemerintah Daerah Provinsi</td>
+                              <td>Laporan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              
+							  <td>T</td>
+							  <td>[2.21.02.1.01.02] </td>
+                          </tr><tr>
+                              <td>3</td>
+                              <td>2.21.000004</td>
+                              <td>Laporan Pelaksanaan Keamanan Informasi Pemerintahan Daerah Provinsi Berbasis Elektronik</td>
+                              <td>Laporan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              
+							  <td>T</td>
+							  <td>[2.21.02.1.01.03] </td>
+                          </tr><tr>
+                              <td>4</td>
+                              <td>2.21.000007</td>
+                              <td>Perangkat Daerah yang Telah Menggunakan Layanan Keamanan Informasi</td>
+                              <td>Perangkat Daerah</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              
+							  <td>T</td>
+							  <td>[2.21.02.1.01.04] </td>
+                          </tr><tr>
+                              <td>5</td>
+                              <td>2.21.000008</td>
+                              <td>Perangkat Daerah yang Terhubung dalam Jaring Komunikasi Sandi</td>
+                              <td>Perangkat Daerah</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              
+							  <td>T</td>
+							  <td></td>
+                          </tr>
+                        </tbody> 
+                     </table>
