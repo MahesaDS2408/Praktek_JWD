@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2023 at 07:39 AM
+-- Generation Time: Aug 13, 2023 at 07:58 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -75,7 +75,18 @@ CREATE TABLE `ipk` (
 --
 
 INSERT INTO `ipk` (`id_ipk`, `id_semester`, `id_mahasiswa`, `ipk`) VALUES
-(2, 1, 1, '4,45');
+(1, 1, 1, '1,5'),
+(2, 2, 1, '1,65'),
+(3, 3, 1, '2,55'),
+(4, 4, 1, '2,90'),
+(5, 1, 2, '2,00'),
+(6, 2, 2, '3,00'),
+(7, 3, 2, '3,40'),
+(8, 1, 3, '3,00'),
+(9, 2, 3, '3,20'),
+(10, 3, 3, '3,10'),
+(11, 1, 4, '3,00'),
+(12, 2, 4, '3,20');
 
 -- --------------------------------------------------------
 
@@ -179,7 +190,7 @@ ALTER TABLE `beasiswa`
 -- AUTO_INCREMENT for table `ipk`
 --
 ALTER TABLE `ipk`
-  MODIFY `id_ipk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_ipk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa`
