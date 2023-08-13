@@ -23,6 +23,7 @@ class AjuanBeasiswaController extends BaseController
 		$file =  $this->request->getFile('file_berkas');
         $randomName = $file->getRandomName();
 
+		// menyimpan data dari form ke dalam database tabel ajuan beasiswa
         $this->ajuanbeasiswaModel = new AjuanBeasiswaModel();
 		$this->ajuanbeasiswaModel->save([
 			'id_beasiswa' => $data['beasiswa'],
