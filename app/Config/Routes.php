@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('daftar_beasiswa', 'AjuanBeasiswaController::index');
+
+
+$routes->get('get-ipk/(:segmen)/(:segmen)', 'CheckingController::mahasiswa/$1/$2');
 
 /*
  * --------------------------------------------------------------------

@@ -1,0 +1,229 @@
+.title1 {
+  width: 50%;
+  text-align: start;
+}
+.title2 {
+  width: 50%;
+  text-align: end;
+}
+
+.icon-container {
+  width: 48px; /* or whatever width you want */
+  height: 24px; /* or whatever height you want */
+  /* overflow: hidden; hide anything that overflows the container */
+}
+
+.my-icon {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.img-kartu {
+  width: 25%;
+}
+
+.profil-kartu {
+  width: 75%;
+}
+
+.profil-kartu2 {
+  width: 70%;
+}
+
+.barcode-profil {
+  width: 30%;
+  object-fit: cover;
+}
+
+.body-kartu {
+  aspect-ratio: 4/1.5;
+}
+
+.text-title {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.text-isi {
+  font-size: 1rem;
+  line-height: 0.9rem;
+  color: black;
+  margin-bottom: 0.25rem;
+}
+
+.text-isi-info {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  color: black;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 100px) {
+  .text-title {
+    font-size: 0.3rem;
+  }
+  .text-isi {
+    font-size: 0.4rem;
+    line-height: 0.5rem;
+  }
+  .text-isi-info {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .text-title {
+    font-size: 0.5rem;
+  }
+  .text-isi {
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+  }
+  .text-isi-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .text-title {
+    font-size: 0.8rem;
+  }
+  .text-isi {
+    font-size: 1rem;
+    line-height: 0.9rem;
+  }
+
+  .text-isi-info {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-title {
+    font-size: 0.5rem;
+  }
+  .text-isi {
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+  }
+
+  .text-isi-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-title {
+    font-size: 0.5rem;
+  }
+  .text-isi {
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+  }
+
+  .text-isi-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-title {
+    font-size: 0.7rem;
+  }
+  .text-isi {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+  }
+
+  .text-isi-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+.card-berita {
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 17rem;
+  display: inline-block;
+  /* height: 15rem; */
+}
+
+.berita {
+  aspect-ratio: 4/3;
+}
+
+.img-berita {
+  height: 8rem;
+}
+.card-img-berita {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Jika teks judul panjang lebih dari 2 baris akan titik2 */
+.text-berita {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* Jika teks judul panjang lebih dari 2 baris akan titik2 */
+.text-informasi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.slider {
+  overflow: hidden;
+  padding-left: 0rem;
+  transition: transform 0.3s;
+  background-color: transparent;
+}
+
+.slide-track {
+  display: inline-flex;
+  transition: transform 0.3s;
+  background-color: transparent;
+}
+
+.cards {
+  background-color: #fff;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 0.5px 8px 0 rgba(0, 0, 0, 0.19); /* Add shadow to card */
+}
+
+.profilfoto {
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
+}
+
+.card-foto-profil {
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.foto-profil {
+  border-radius: 0.35rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.foto-berkas {
+  border-radius: 0.35rem;
+  width: 100%;
+  object-fit: cover;
+}
