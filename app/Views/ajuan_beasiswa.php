@@ -51,6 +51,7 @@
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="email">Email</label>
                                     <input class="form-control" id="email" type="email" placeholder="Masukan Email" required />
+                                    <p id="emailValidationText" class="text-danger"></p>
                                 </div>
                                 <!-- Form Group (IPK)-->
                                 <div class="col-md-6">
@@ -74,7 +75,7 @@
                                 <!-- Form Group (Upload File)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="file_berkas">Upload Berkas Syarat</label>
-                                    <input class="form-control" id="file_berkas" type="file" name="file_berkas" required/>
+                                    <input class="form-control" accept=".pdf, .png, .zip" id="file_berkas" type="file" name="file_berkas" required/>
                                 </div>
                             </div>
                             <!-- Save changes button-->

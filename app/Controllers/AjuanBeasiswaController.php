@@ -15,4 +15,11 @@ class AjuanBeasiswaController extends BaseController
 		$data['semester'] = $model->get_data_semester();
 		return view('ajuan_beasiswa', $data);
 	}
+
+	public function create()
+	{
+		$data = $this->request->getPost();
+		$file =  $this->request->getFile('file_dataset');
+        $randomName = $file->getRandomName();
+	}
 }

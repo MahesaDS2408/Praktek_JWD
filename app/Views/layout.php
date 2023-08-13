@@ -85,6 +85,27 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+        <!-- Validasi Email dengan JS -->
+        <script>
+        $(document).ready(function() {
+            $('#email').on('input', function() {
+                var email = $('#email').val();
+
+                // Validasi email dengan regex
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                var isValidEmail = emailPattern.test(email);
+
+                var emailValidationText = $('#emailValidationText');
+                if (!isValidEmail) {
+                    emailValidationText.text('Masukkan alamat email yang valid.');
+                } else {
+                    emailValidationText.text('');
+                }
+            });
+        });
+        </script>
+
+
         <!-- digunakan untuk mengecek ipk dengan nama dan email -->
         <script>
             $(document).ready(function() {
@@ -92,9 +113,9 @@
                     
                     var nama = $('#nama').val();
                     var email = $('#email').val();
-                    var semester = $('#email').val();
-                    console.log('Nama:', nama); // Log nilai nama ke konsol
-                    console.log('Email:', email);
+                    // var semester = $('#email').val();
+                    // console.log('Nama:', nama); // Log nilai nama ke konsol
+                    // console.log('Email:', email);
 
                     var url = "/CheckingController/mahasiswa/"+nama+"/"+email;
                     var base_url = window.location.origin;
@@ -106,7 +127,7 @@
                         method: 'GET',
                         // data: { nama: nama, email: email },
                         success: function(response) {
-                            console.log('Response:', response);
+                            // console.log('Response:', response);
                             $('#ipk').val(response);
 
 
