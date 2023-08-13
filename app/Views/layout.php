@@ -128,7 +128,8 @@
                         // data: { nama: nama, email: email },
                         success: function(response) {
                             // console.log('Response:', response);
-                            $('#ipk').val(response);
+                            $('#ipk').val(response.ipk);
+                            $('#id_ipk').val(response.id_ipk);
 
 
                             // Mengambil nilai IPK dan menonaktifkan tombol jika IPK kurang dari 3

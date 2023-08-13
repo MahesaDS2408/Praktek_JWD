@@ -35,6 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('daftar_beasiswa', 'AjuanBeasiswaController::index');
 $routes->post('daftar_beasiswa', 'AjuanBeasiswaController::create');
+$routes->get('hasil', 'Home::hasil');
+
 
 
 

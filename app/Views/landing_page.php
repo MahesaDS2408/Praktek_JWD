@@ -8,7 +8,7 @@
         <nav class="nav nav-borders">
             <a class="nav-link active ms-0" href="<?php base_url() ?>/">Pilihan Beasiswa</a>
             <a class="nav-link" href="<?php base_url() ?>/daftar_beasiswa">Daftar</a>
-            <a class="nav-link" href="#">Hasil</a>
+            <a class="nav-link" href="<?php base_url() ?>/hasil">Hasil</a>
         </nav>
         <hr class="mt-0 mb-4" />
         <div class="row">

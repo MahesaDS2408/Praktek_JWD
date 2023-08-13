@@ -9,7 +9,7 @@
         <nav class="nav nav-borders">
             <a class="nav-link ms-0" href="<?php base_url() ?>/">Pilihan Beasiswa</a>
             <a class="nav-link active" href="<?php base_url() ?>/daftar_beasiswa">Daftar</a>
-            <a class="nav-link" href="#">Hasil</a>
+            <a class="nav-link" href="<?php base_url() ?>/hasil">Hasil</a>
         </nav>
         <hr class="mt-0 mb-4" />
         <div class="row">
@@ -57,6 +57,7 @@
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="ipk">IPK Terakhir</label>
                                     <input class="form-control" id="ipk" type="text" name="ipk" placeholder="Ipk Muncul Setelah input semester saat ini" disabled />
+                                    <input class="form-control" id="id_ipk" type="text" name="id_ipk"   />
                                 </div>
                             </div>
                             

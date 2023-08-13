@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\AjuanBeasiswaModel;
 use App\Models\BeasiswaModel;
 use App\Models\SemesterModel;
 
@@ -19,7 +20,21 @@ class AjuanBeasiswaController extends BaseController
 	public function create()
 	{
 		$data = $this->request->getPost();
-		$file =  $this->request->getFile('file_dataset');
+		$file =  $this->request->getFile('file_berkas');
         $randomName = $file->getRandomName();
+
+        $this->ajuanbeasiswaModel = new AjuanBeasiswaModel();
+		$this->ajuanbeasiswaModel->save([
+			'id_beasiswa' => $data['beasiswa'],
+			'id_ipk' => $data['id_ipk'],
+			'file_ajuan_beasiswa' => $randomName,
+			'status_ajuan' => 'belum di verivikasi'
+		]);
+		//masukan file ke folder
+		if ($file->isValid() && ! $file->hasMoved())
+		{
+			$file->move(ROOTPATH.'public/dokumen/',$randomName);
+		}
+		return redirect()->to('hasil');
 	}
 }

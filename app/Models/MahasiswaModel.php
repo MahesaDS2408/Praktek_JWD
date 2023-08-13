@@ -19,8 +19,22 @@ class MahasiswaModel extends Model
         ->where('mahasiswa.email_mahasiswa',['email_mahasiswa'=>$email])
         ->orderBy('id_ipk', 'desc')
         ->limit(1)
-        ->get()->getRow('ipk');
+        ->get()->getRow();
 
+    }
+
+    public function get_data_beasiswa($email, $nama)
+    {
+        return $this->db->table('mahasiswa')
+        ->join('ipk', 'ipk.id_mahasiswa = mahasiswa.id_mahasiswa')
+        ->join('semester', 'semester.id_semester = ipk.id_semester')
+        ->join('ajuan_beasiswa', 'ajuan_beasiswa.id_ipk = ipk.id_ipk', 'left')
+        ->join('beasiswa', 'beasiswa.id_beasiswa = ajuan_beasiswa.id_beasiswa')
+        ->where(['mahasiswa.nama_mahasiswa' => $nama, 'mahasiswa.email_mahasiswa' => $email])
+        ->orderBy('ipk.id_ipk', 'desc')
+        ->limit(1)
+        ->get()
+        ->getRow();
     }
 
 }
