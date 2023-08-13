@@ -36,6 +36,6 @@ class AjuanBeasiswaController extends BaseController
 		{
 			$file->move(ROOTPATH.'public/dokumen/',$randomName);
 		}
-		return redirect()->to('hasil/'.$data['email'].'/'.$data['nama']);
+		return redirect()->to('hasil?email='.$data['email'].'&nama='.$data['nama']);
 	}
 }
