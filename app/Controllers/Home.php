@@ -30,7 +30,7 @@ class Home extends BaseController
 				$datas['hasil'] = false;
 			}
 			return view('hasil', $datas);
-			var_dump($datas);
+			// var_dump($datas);
 
 		}else{
 			$datas['hasil'] = false;
