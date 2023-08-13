@@ -15,13 +15,13 @@
         <link rel="icon" type="image/x-icon" href="<?php base_url() ?>/assets/admin/assets/img/favicon.png" />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
-        <script src="<?php base_url(); ?>/assets/admin/assets/js/jquery.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
+        <!-- <script src="<?php base_url(); ?>/assets/admin/assets/js/jquery.min.js" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script> -->
 
 
 
     </head>
-    <body class="nav-fixed" onload="sweet()">
+    <body class="nav-fixed">
         <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
             <!-- Sidenav Toggle Button-->
             <!-- Navbar Brand-->
@@ -59,7 +59,6 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="<?php base_url() ?>/assets/admin/js/scripts.js"></script>
-        <script src="<?php base_url() ?>/assets/admin/js/custom-js.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
         <script src="<?php base_url() ?>/assets/admin/assets/demo/chart-area-demo.js"></script>
         <script src="<?php base_url() ?>/assets/admin/assets/demo/chart-bar-demo.js"></script>
@@ -84,23 +83,58 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-        <!-- Select Pengumuman -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- digunakan untuk mengecek ipk dengan nama dan email -->
         <script>
-            $(".theSelect").select2();
-        </script>
-        <!-- pengumuman-->
-        <script>
-            $(function() {
-                $('#tgl').hide();
-                $('#kategori').change(function() {
-                    if ($('#kategori').val() == '2') {
-                        $('#tgl').show();
-                        createByJson();
-                    } else {
-                        $('#tgl').hide();
-                    }
+            $(document).ready(function() {
+                $('#nama, #email').on('input', function() {
+                    
+                    var nama = $('#nama').val();
+                    var email = $('#email').val();
+                    var semester = $('#email').val();
+                    console.log('Nama:', nama); // Log nilai nama ke konsol
+                    console.log('Email:', email);
+
+                    var url = "/CheckingController/mahasiswa/"+nama+"/"+email;
+                    var base_url = window.location.origin;
+                    url = base_url + url;
+
+                    // Menggunakan AJAX untuk mengambil nilai IPK dari controller
+                    $.ajax({
+                        url: url, // Ganti dengan URL controller yang sesuai
+                        method: 'GET',
+                        // data: { nama: nama, email: email },
+                        success: function(response) {
+                            console.log('Response:', response);
+                            $('#ipk').val(response);
+
+
+                            // Mengambil nilai IPK dan menonaktifkan tombol jika IPK kurang dari 3
+                            var ipk = parseFloat(response);
+                            var submitButton = $('#submitButton'); // Ganti dengan ID tombol yang sesuai
+                            var beasiswaSelect = $('#beasiswa'); // Ganti dengan ID select yang sesuai
+                            var file_berkas = $('#file_berkas'); // Ganti dengan ID input yang sesuai
+
+
+                            if (ipk < 3) {
+                                submitButton.prop('disabled', true);
+                                file_berkas.prop('disabled', true);
+                                beasiswaSelect.prop('disabled', true);
+                            } else {
+                                submitButton.prop('disabled', false);
+                                file_berkas.prop('disabled', false);
+                                beasiswaSelect.prop('disabled', false);
+                            }
+
+
+
+
+                        }
+                    });
                 });
             });
         </script>
+
     </body>
 </html>

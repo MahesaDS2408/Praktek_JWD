@@ -36,7 +36,6 @@ $routes->get('/', 'Home::index');
 $routes->get('daftar_beasiswa', 'AjuanBeasiswaController::index');
 
 
-$routes->get('get-ipk/(:segmen)/(:segmen)', 'CheckingController::mahasiswa/$1/$2');
 
 /*
  * --------------------------------------------------------------------
